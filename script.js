@@ -12,16 +12,6 @@ class Animal {
   }
 }
 
-class Cat extends Animal {
-  constructor(species) {
-    super(species);
-  }
-
-  purr() {
-    console.log("purr");
-  }
-}
-
 class Dog extends Animal {
   constructor(species) {
     super(species);
@@ -32,11 +22,16 @@ class Dog extends Animal {
   }
 }
 
-// Example usage:
-const myCat = new Cat("Siamese");
-myCat.makeSound(); // Output: The Siamese makes a sound
-myCat.purr(); // Output: purr
+class Cat extends Animal {
+  constructor(species) {
+    super(species);
+  }
 
-const myDog = new Dog("Golden Retriever");
-myDog.makeSound(); // Output: The Golden Retriever makes a sound
-myDog.bark(); // Output: woof
+  purr() {
+    console.log("purr");
+  }
+}
+
+window.Animal = Animal;
+window.Dog = Dog;
+window.Cat = Cat;
